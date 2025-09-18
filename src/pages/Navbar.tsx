@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../components/MobileMenu";
 
 const navItems = [
   { to: "/", label: "Home" },

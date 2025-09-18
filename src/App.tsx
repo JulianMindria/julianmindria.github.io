@@ -1,14 +1,14 @@
-import { Routes, Route, Link } from "react-router-dom";
+﻿import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import Navbar from "./pages/Navbar";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <div className="app relative flex min-h-screen flex-col bg-[var(--bg)] text-[var(--fg)] antialiased">
-      {/* Ambient atmosphere */}
       <div className="pointer-events-none fixed inset-0 -z-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(56,189,248,0.32),transparent_55%)] opacity-70 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(99,102,241,0.38),transparent_60%)] opacity-60 blur-[120px]" />
@@ -22,8 +22,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Fallback */}
           <Route
             path="*"
             element={
